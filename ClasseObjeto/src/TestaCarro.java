@@ -10,10 +10,15 @@ public class TestaCarro {
         System.out.println(obj1.toString());
         obj1.ligar();
         System.out.println(obj1.toString());
+        //Observação o professor disse em sala de aula que se um carro acelear e o valor vai dar negativo, desconsiiderar e colocar o valor
 
-        Carro obj2 = new Carro("Fiat", "Palio", "E2D31F0", true, 80);
+        Carro obj2 = new Carro("Fiat", "Palio", "E2D31F0", true, 0);
         System.out.println(obj2.toString());
-        obj2.desligar();
         System.out.println(obj2.toString());
+        obj2.acelerarCarro(100);
+        System.out.println(obj2.toString());
+        obj2.frearCarro(1000);
+        System.out.println(obj2);
+
     }
 }

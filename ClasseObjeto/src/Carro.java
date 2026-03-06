@@ -12,7 +12,7 @@ public class Carro {
         this.modelo = modelo;
         this.placa = placa;
         this.motor = motor;
-        this.velAtual = velAtual;
+        this.velAtual = 0;
     }
     // ligar o carro
     public void ligar(){
@@ -27,6 +27,33 @@ public class Carro {
             this.motor = false;
             System.out.println("Carro foi desligado");
         }
+    }
+
+
+    //Acelear Carro
+    public void acelerarCarro(float veladicionar) {
+        if (this.motor) {
+            this.velAtual += veladicionar;
+            System.out.println("Acelerando carro");
+        }
+        else {
+            System.out.println("Motor esta desligado, quer acelearar como?");
+        }
+    }
+
+    //Frear
+    public void frearCarro(float valor){
+        if (!this.motor){
+            System.out.println("Motor desligado");
+        }
+        else if (valor > velAtual){
+            System.out.println("Velocidade para frear não pode ser superior a velociadade atual ou inferiror a 0");
+        }
+        else if (valor < 0){
+            System.out.println("Valor não pode ser abaixo de 0");
+        }
+       else{ this.velAtual -= valor;
+    }
     }
     // operações (métodos)
     public String toString(){ // converte objeto para String
