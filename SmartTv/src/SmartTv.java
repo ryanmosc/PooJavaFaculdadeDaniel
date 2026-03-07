@@ -8,7 +8,7 @@ public class SmartTv {
     public SmartTv(String marca, String modelo, int volume, boolean internet) {
         this.marca = marca;
         this.modelo = modelo;
-        this.volume = volume;
+        this.mostrarVolume(volume)  ;
         this.internet = internet;
     }
 
@@ -17,7 +17,10 @@ public class SmartTv {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+        //Método de instancia, tipo ,lenght
+        if (marca.length() <= 30) {
+            this.marca = marca;
+        }
     }
 
     public String getModelo() {
@@ -25,7 +28,15 @@ public class SmartTv {
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+        char primeiraLetra = modelo.charAt(0);
+         boolean maiuscula = Character.isUpperCase(primeiraLetra);
+         if (maiuscula){
+             this.modelo = modelo;
+         }
+         else {
+             System.out.println("Coloque a primeira letra em maiusculo");
+         }
+
     }
 
     public int getVolume() {
@@ -33,8 +44,9 @@ public class SmartTv {
     }
 
     public void setVolume(int volume) {
-        this.volume = volume;
+        this.mostrarVolume(volume);
     }
+
 
     public boolean isInternet() {
         return internet;
@@ -42,6 +54,12 @@ public class SmartTv {
 
     public void setInternet(boolean internet) {
         this.internet = internet;
+    }
+
+    public void mostrarVolume(int volume){
+        if (volume >= 0 && volume <= 100 ){
+            this.volume = volume;
+        }
     }
 
 
