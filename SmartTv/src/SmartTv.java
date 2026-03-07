@@ -63,6 +63,27 @@ public class SmartTv {
     }
 
 
+
+    public void abrirYoutube(){
+       boolean vaiAbrir = conectarNaInternet();
+       if (vaiAbrir){
+           System.out.println("Abrindo o youtube");
+       }
+       else {
+           System.out.println("Sem sinal");
+       }
+    }
+
+    private boolean conectarNaInternet(){
+        System.out.println("Verificando conexões disponiveis");
+        System.out.println("Consultando as credenciais");
+        int numero = (int) (Math.random() * 10);
+        if (numero < 5){
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return "SmartTv{" +
