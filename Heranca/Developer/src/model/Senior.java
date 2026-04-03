@@ -15,6 +15,9 @@ public class Senior extends Desenvolvedor {
         this.verba = verba;
     }
 
+    public Senior(String carlos) {
+    }
+
 
     public float getVerba() {
         return verba;

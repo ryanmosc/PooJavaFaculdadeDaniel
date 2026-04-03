@@ -1,15 +1,24 @@
+import model.Desenvolvedor;
+import model.Junior;
+import model.Pleno;
+import model.Senior;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Desenvolvedor[] devs = new Desenvolvedor[4];
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        devs[0] = new Junior("Ana");
+        devs[1] = new Pleno("Bruno");
+        devs[2] = new Senior("Carlos");
+        devs[3] = new Desenvolvedor("Daniel");
+
+        for (Desenvolvedor dev : devs) {
+            dev.codar();
+            System.out.println("Bônus: " + dev.calcularBonus());
+            System.out.println(dev.toString());
+            System.out.println("------------------------");
         }
     }
 }

@@ -15,6 +15,9 @@ public class Pleno extends Desenvolvedor{
         this.projetosEntregues = projetosEntregues;
     }
 
+    public Pleno(String bruno) {
+    }
+
     public int getProjetosEntregues() {
         return projetosEntregues;
     }

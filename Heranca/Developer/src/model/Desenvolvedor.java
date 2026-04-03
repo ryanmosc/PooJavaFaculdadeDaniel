@@ -13,6 +13,9 @@ public class Desenvolvedor {
         this.salario = salario;
     }
 
+    public Desenvolvedor(String daniel) {
+    }
+
     public String getNome() {
         return nome;
     }
